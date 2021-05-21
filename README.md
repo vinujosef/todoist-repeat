@@ -6,6 +6,7 @@ NodeJS app to create sub-tasks in [Todoist](https://todoist.com/) under the pare
 ## Technologies Used
 - NodeJS
 - Todoist API
+- Heroku
 
 
 ## Usage
