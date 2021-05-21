@@ -1,0 +1,23 @@
+{
+  "name": "todoist-repeat",
+  "version": "1.0.0",
+  "description": "NodeJS app to create sub-tasks (under same name) under the parent-task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinujosef/todoist-repeat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinujosef/todoist-repeat/issues"
+  },
+  "homepage": "https://github.com/vinujosef/todoist-repeat#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^9.0.2"
+  }
+}
