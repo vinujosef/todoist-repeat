@@ -1,6 +1,7 @@
 // Import dotenv and axios
 require('dotenv').config();
 const axios = require('axios');
+const cron = require('node-cron');
 
 // Data for sending
 const data = JSON.stringify({"content":"Axios Test", "parent_id": +process.env.PARENT_ID}); // "+" before .env value is to keep the PARENT_ID as number. If "+" is not added, the PARENT_ID is taken as string
@@ -17,10 +18,14 @@ const config = {
   "data": data
 };
 
-// Axios setup
-axios(config)
-  .then((result) => {
-    console.log(JSON.stringify(result.data));
-  }).catch((err) => {
-    console.log(err.message);
-  });
+// Add a new task every minute
+cron.schedule('* * * * *', function() {
+  console.log(Date.now());
+  // Axios setup
+  axios(config)
+    .then((result) => {
+      console.log(JSON.stringify(result.data));
+    }).catch((err) => {
+      console.log(err.message);
+    });
+});
