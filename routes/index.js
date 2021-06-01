@@ -34,7 +34,26 @@ router.get('/', function(req, res, next) {
       });
   });
 
-  res.render('index', { title: 'Express' });
+  const sampleData = [
+    {
+      content: "Test 1",
+      date: "31.05.2021",
+    },
+    {
+      content: "Test 2",
+      date: "31.05.2021",
+    },
+    {
+      content: "Test 3",
+      date: "31.05.2021",
+    },
+    {
+      content: "Test 4",
+      date: "1.06.2021",
+    },
+  ];
+
+  res.render('index', { sampleData });
 });
 
 module.exports = router;

@@ -1,2 +1,20 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<section>
+  <div class='container'>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th scope='col'>Name</th>
+          <th scope='col'>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each sampleData}}
+          <tr>
+            <td>{{this.content}}</td>
+            <td>{{this.date}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</section>
