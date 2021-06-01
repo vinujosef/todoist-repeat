@@ -25,7 +25,6 @@ router.get('/', function(req, res, next) {
 
   // Add a new task every 3 hours
   cron.schedule('0 */2 * * *', function() {
-    console.log("Reached 4: " + Date.now());
     // Axios setup
     axios(config)
       .then((result) => {
