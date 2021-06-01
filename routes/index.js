@@ -53,7 +53,7 @@ router.get('/', function(req, res, next) {
     },
   ];
 
-  res.render('index', { sampleData });
+  res.render('index', { sampleData, admin:true });
 });
 
 module.exports = router;
